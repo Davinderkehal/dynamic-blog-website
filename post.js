@@ -4,7 +4,6 @@ const postId = parseInt(URLParams.get('id'), 10);
 const loadPost = () => {
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     const post = posts.find(po => po.id === postId);
-
     if (post) {
         document.getElementById('postInfo').innerHTML = `
             <h2>${post.title}</h2>
@@ -40,7 +39,6 @@ const loadPost = () => {
 
 const savePost = (e) => {
     e.preventDefault();
-
     const postUpdate = {
         id: postId,
         title: document.getElementById('editTitle').value,
@@ -50,7 +48,6 @@ const savePost = (e) => {
 
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     const postIndex = posts.findIndex(po => po.id === postId);
-
     if (postIndex !== -1) {
         posts[postIndex] = postUpdate;
         localStorage.setItem('posts', JSON.stringify(posts));
