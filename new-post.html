@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a New Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Create a New Post on the Blog</h1>
+    
+    <form id="formPost">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="5" required></textarea>
+        
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter image URL">
+        
+        <button type="submitButton">Save Post</button>
+    </form>
+    
+    <a href="index.html" class="homeButton">Back to HomePage</a>
+
+    <script src="new-post.js"></script>
+</body>
+</html>
